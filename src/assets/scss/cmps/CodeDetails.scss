@@ -1,0 +1,41 @@
+.code-details {
+
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 300px 300px 1fr;
+    justify-items: center;
+
+    &>* {
+        grid-column: 2/4;
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    .code-details-header {
+        align-items: center;
+        gap: 20px;
+
+        .back-btn {
+            background-color: black;
+            border: none;
+            cursor: pointer;
+
+            svg {
+                height: 30px;
+                margin-top: 25px;
+            }
+        }
+
+        .back-btn:hover * {
+            color: $hoverGreen;
+        }
+    }
+
+    .error-message {
+        color: $mainRed;
+        min-height: 20px;
+        letter-spacing: 2px;
+    }
+}

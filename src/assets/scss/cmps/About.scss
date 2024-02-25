@@ -1,0 +1,14 @@
+.about {
+    grid-column: 2/3;
+
+    p {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    h1,
+    h2 {
+        color: $secondBeige;
+        margin-top: 40px;
+    }
+}

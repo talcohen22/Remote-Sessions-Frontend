@@ -1,0 +1,6 @@
+.code-index{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 300px 300px 1fr;
+    justify-items: center;
+}
