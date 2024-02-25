@@ -69,20 +69,24 @@ export function CodeDetails() {
     }
 
     return (
-            <section className="code-details">
+        <section className="code-details">
 
-                <div className="code-details-header flex">
-                    <button className="back-btn" onClick={getLobbyPage} title="back">
-                        <FontAwesomeIcon icon={faCircleArrowLeft} />
-                    </button>
-                    <h1>Code block page: {code.title}</h1> {/*add the code title*/}
-                </div>
+            <div className="code-details-header flex">
+                <button className="back-btn" onClick={getLobbyPage} title="back">
+                    <FontAwesomeIcon icon={faCircleArrowLeft} />
+                </button>
+                <h1>Code block page: {code.title}</h1> {/*add the code title*/}
+            </div>
 
-                <p className="error-message">{isShowMessage ? `You are in read mode, your changes will not be saved` : ''}</p>
-                
-                <CodeEditor code={code} onHandleChange={onHandleChange}/>
-            
-            </section>
+            <p className="error-message">{isShowMessage ? `You are in read mode, your changes will not be saved` : ''}</p>
+
+            {code.content && code.solution &&
+                code.content.replace(/\s/g, '') === code.solution.replace(/\s/g, '') &&
+                <p className="solution">🤩💪</p>}
+
+            <CodeEditor code={code} onHandleChange={onHandleChange} />
+
+        </section>
     )
 }
 

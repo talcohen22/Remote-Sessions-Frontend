@@ -38,4 +38,11 @@
         min-height: 20px;
         letter-spacing: 2px;
     }
+
+    .solution{
+        position: absolute;
+        top: 80vh;
+        z-index: 1;
+        font-size: 40px;
+    }
 }
